@@ -1,18 +1,18 @@
 require 'roo'
 
-describe Array, "when empty" do
+describe "when empty" do
     before do
-      @empty_array = []
+      @target = Roo::Excelx.new('./spec/fixture/testdata.xlsx')
     end
   
-    it "should be empty" do
-      @empty_array.should be_empty
+    it "should not be empty" do
+      expect(@target).not_to be_nil
     end
-  
-    it "should size 0" do
-      @empty_array.size.should == 0
+
+    it "'s a1 cell has string 'a1'" do
+      expect(@target.sheet(0).cell('A',1)).to eq('A1')
     end
-  
+
     after do
       @empty_array = nil
     end
