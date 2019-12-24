@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'roo'
+gem 'simplecov'
+gem 'simplecov-clover'
+gem 'rspec'
